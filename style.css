@@ -5,6 +5,7 @@
     --text-dim: #a1a1aa;
 }
 
+
 body {
     background-color: var(--bg-color);
     margin: 0;
