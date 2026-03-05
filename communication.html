@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Understanding Communication Concepts | Carpentry and Joinery Guild</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Segoe UI',sans-serif; background:#0f0f0f; color:#e0e0e0; line-height:1.7; }
+    header { position:fixed; top:0; width:100%; padding:1.2rem 6%; background:rgba(15,15,15,0.9); backdrop-filter:blur(10px); z-index:1000; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-size:1.7rem; font-weight:bold; color:#d4a373; }
+    nav ul { display:flex; list-style:none; }
+    nav ul li { margin-left:2.2rem; }
+    nav ul li a { color:#e0e0e0; text-decoration:none; font-weight:500; transition:color 0.3s; }
+    nav ul li a:hover { color:#d4a373; }
+    .hero { min-height:70vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 5%; background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/3803510/pexels-photo-3803510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center/cover; position:relative; }
+    .hero h1 { font-size:clamp(3rem,8vw,6rem); font-weight:900; margin-bottom:1rem; color:#fff; }
+    .hero p { font-size:1.4rem; max-width:700px; margin:0 auto 2rem; }
+    section { padding:6rem 6% 4rem; }
+    h2 { font-size:3rem; color:#d4a373; margin-bottom:2rem; text-align:center; }
+    .content { max-width:1100px; margin:0 auto; font-size:1.15rem; }
+    .component-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:2rem; margin:3rem 0; }
+    .component-card { background:#1a1a1a; padding:2rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.6); transition:transform 0.3s; }
+    .component-card:hover { transform:translateY(-8px); }
+    .component-card h3 { color:#d4a373; margin-bottom:1rem; }
+    .cycle { background:#1a1a1a; padding:3rem; border-radius:12px; text-align:center; font-size:1.3rem; margin:3rem 0; box-shadow:0 8px 20px rgba(0,0,0,0.6); }
+    .cycle-arrow { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; align-items:center; margin:2rem 0; }
+    .cycle-step { background:#222; padding:1rem 1.5rem; border-radius:50px; font-weight:bold; color:#d4a373; }
+    .cta-btn { display:inline-block; background:#d4a373; color:#000; padding:1rem 2.5rem; border-radius:50px; text-decoration:none; font-weight:bold; font-size:1.2rem; transition:all 0.3s; margin-top:1rem; }
+    .cta-btn:hover { background:#e0c08a; transform:translateY(-4px); }
+    footer { text-align:center; padding:2.5rem; background:#000; font-size:1rem; color:#aaa; border-top:1px solid #333; }
+    @media (max-width:768px) { header { flex-direction:column; gap:1rem; } .hero { min-height:60vh; padding:8rem 5% 4rem; } h2 { font-size:2.4rem; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Carpentry and Joinery Guild</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="course.html">Course</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Understanding Communication Concepts</h1>
+      <p>Module: Communicating Verbally and in Writing 1<br>
+      <strong>Learning Outcome 1 • TEVET COL-01-01</strong></p>
+      <p style="margin-top:1.5rem; opacity:0.95;">
+        Master the foundation every carpenter and joiner in Malawi needs — clear instructions, precise writing, and instant feedback to prevent mistakes and build trust on every site and workshop.
+      </p>
+      
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <h2>Introduction</h2>
+      <p>Communication is an important element in life. Both animals and human beings need communication to survive. It is something we do all the time, mostly without thinking about it.</p>
+      <p>All too often there is a difference between what we say and what we think we have said, and between how we feel we have handled other people and how they think they have been treated. Hence the need for careful planning to communicate effectively when such ‘gaps’ occur.</p>
+    </div>
+  </section>
+
+  <section style="background:#1a1a1a;">
+    <div class="content">
+      <h2>Aims of Communication</h2>
+      <p>Communication must have an aim or a purpose. The aims can be to:</p>
+      <ul style="margin:2rem 0; padding-left:1.5rem; font-size:1.15rem;">
+        <li><strong>Inform</strong> — the desire to supply factual information</li>
+        <li><strong>Persuade</strong> — the desire to influence the recipient to accept a particular idea or opinion</li>
+        <li><strong>Initiate action</strong> — the sender requires the recipient to perform a particular task</li>
+        <li><strong>Enquire</strong> — to find out on the availability of a product, equipment etc.</li>
+        <li><strong>Educate</strong> — give someone information about something they do not know</li>
+        <li><strong>Express thoughts, ideas, opinions and feelings</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <h2>The Communication Process</h2>
+      <p><strong>Definition of Communication</strong><br>
+      Before we discuss the communication process we need to start from the definition of the term communication. The word communication has been defined differently by different authors.</p>
+      
+      <h2 style="font-size:1.8rem; margin-top:3rem;">Key Definitions</h2>
+      <ul style="margin:2rem 0; padding-left:1.5rem;">
+        <li>the passing of information between two people</li>
+        <li>the art of transmitting or exchanging of information</li>
+        <li>the imparting or exchanging information</li>
+        <li>the transfer of information from one person to another through some medium</li>
+        <li>the process of sending or receiving information by using previously agreed upon symbols in a chosen medium in order to produce a desired response</li>
+        <li>the process of establishing commonness of thoughts between a sender and the receiver</li>
+        <li>a two way process of giving and receiving information through any number of channels</li>
+        <li>Communication is the imparting, conveying or exchanging of ideas or opinions using oral, written or visual forms.</li>
+        <li>Communication is a two-way process where information (a message) is sent from one person (the sender) through a channel to another person (the receiver), who reacts by giving feedback (the response)</li>
+      </ul>
+      <p><strong>Important:</strong> Communication is always a two-way process — there must be a Sender (transmitter/source/encoder) and a Receiver (audience/recipient/decoder).</p>
+    </div>
+  </section>
+
+  <section style="background:#1a1a1a;">
+    <div class="content">
+      <h2>Concept</h2>
+      <ul style="margin:2rem 0; padding-left:1.5rem;">
+        <li>is an idea or abstract principle</li>
+        <li>is an idea how something is</li>
+        <li>is an idea how something should be done</li>
+        <li>is a thought</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <h2>Components (Elements) of Communication</h2>
+      <div class="component-grid">
+        <div class="component-card"><h3>(a) Information</h3><p>Raw material (unprocessed data) that must be changed into a Message through Encoding.</p></div>
+        <div class="component-card"><h3>(e) Encode</h3><p>Process of turning Information into a Message so the Sender can choose the right Medium (Verbal, Written or Nonverbal).</p></div>
+        <div class="component-card"><h3>(b) Message</h3><p>Processed and encoded Information ready for the Receiver. A clear Message puts the audience in an understanding position.</p></div>
+        <div class="component-card"><h3>(d) Sender</h3><p>The deliverer who encodes the information and chooses the Channel. Sender can later become a Receiver when Feedback arrives.</p></div>
+        <div class="component-card"><h3>(c) Decoding</h3><p>The Receiver interprets the meaning of the Message (it may or may not match what the Sender intended).</p></div>
+        <div class="component-card"><h3>(e) Receiver</h3><p>The destination who decodes, uses or keeps the Message, and gives Feedback.</p></div>
+        <div class="component-card"><h3>(f) Medium</h3><p>The form of the Message:<br><strong>Verbal:</strong> speech, lesson, conference<br><strong>Written:</strong> letter, report, memo<br><strong>Nonverbal:</strong> smile, nod, dressing</p></div>
+        <div class="component-card"><h3>(g) Channel</h3><p>The actual path the Message travels (telephone for oral, notice board for written, body language for visual).</p></div>
+        <div class="component-card"><h3>(h) Purpose</h3><p>The reason communication happens — inform, persuade, initiate action, enquire, educate, or express feelings.</p></div>
+        <div class="component-card"><h3>(i) Feedback</h3><p>The Receiver’s response that shows the Sender how the Message was understood (positive or negative).</p></div>
+        <div class="component-card"><h3>(j) Motivation</h3><p>The desire that turns the Purpose into an actual communication process.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cycle">
+    <div class="content">
+      <h2>The Communication Cycle / Process</h2>
+      <div class="cycle">
+        <div class="cycle-arrow">
+          <div class="cycle-step">SENDER</div>
+          <i class="fas fa-arrow-right" style="color:#d4a373;font-size:1.8rem;"></i>
+          <div class="cycle-step">ENCODE</div>
+          <i class="fas fa-arrow-right" style="color:#d4a373;font-size:1.8rem;"></i>
+          <div class="cycle-step">MESSAGE</div>
+          <i class="fas fa-arrow-right" style="color:#d4a373;font-size:1.8rem;"></i>
+          <div class="cycle-step">MEDIUM</div>
+          <i class="fas fa-arrow-right" style="color:#d4a373;font-size:1.8rem;"></i>
+          <div class="cycle-step">CHANNEL</div>
+          <i class="fas fa-arrow-right" style="color:#d4a373;font-size:1.8rem;"></i>
+          <div class="cycle-step">DECODE</div>
+          <i class="fas fa-arrow-right" style="color:#d4a373;font-size:1.8rem;"></i>
+          <div class="cycle-step">RECEIVER</div>
+          <i class="fas fa-arrow-left" style="color:#d4a373;font-size:1.8rem;"></i>
+          <div class="cycle-step">FEEDBACK</div>
+        </div>
+        <p><strong>NOTE:</strong> Other elements are also vital on top of the basic ones highlighted earlier.</p>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <footer>
+  2026©  Carpentry and Joinery Guild by Patrick Chapalamira Jnr | Learn Carpentry with Passion
+  </footer>
+
+</body>
+</html>
