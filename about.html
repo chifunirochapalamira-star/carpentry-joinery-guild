@@ -1,123 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us | Carpentry and Joinery Guild</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background:#0f0f0f; color:#e0e0e0; line-height:1.7;
-    }
-    header {
-      position:fixed; top:0; width:100%; padding:1.2rem 6%;
-      background:rgba(15,15,15,0.9); backdrop-filter:blur(10px);
-      z-index:1000; display:flex; justify-content:space-between; align-items:center;
-    }
-    .logo { font-size:1.7rem; font-weight:bold; color:#d4a373; }
-    nav ul { display:flex; list-style:none; }
-    nav ul li { margin-left:2.2rem; }
-    nav ul li a { color:#e0e0e0; text-decoration:none; font-weight:500; transition:color 0.3s; }
-    nav ul li a:hover { color:#d4a373; }
-
-    .hero {
-      min-height:70vh; display:flex; align-items:center; justify-content:center; text-align:center;
-      padding:0 5%; background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-      url('https://airtasker-seo-assets-prod.s3.amazonaws.com/en_US/1696204391639-carpenter-cutting-wood.jpg') no-repeat center/cover; /* fallback */
-      position:relative;
-    }
-    .hero-content { max-width:900px; }
-    .hero h1 { font-size:clamp(3rem,8vw,6rem); font-weight:900; margin-bottom:1rem; color:#fff; }
-    .hero p { font-size:1.4rem; max-width:700px; margin:0 auto 2rem; }
-
-    section { padding:6rem 6% 4rem; }
-    h2 { font-size:3rem; color:#d4a373; margin-bottom:2rem; text-align:center; }
-    .content { max-width:1100px; margin:0 auto; font-size:1.15rem; }
-    .content p { margin-bottom:1.5rem; }
-    .story-grid { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; margin:4rem 0; }
-    .story-img { width:100%; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.6); }
-    .cta-btn {
-      display:inline-block; background:#d4a373; color:#000; padding:1rem 2.5rem;
-      border-radius:50px; text-decoration:none; font-weight:bold; font-size:1.2rem; transition:all 0.3s;
-    }
-    .cta-btn:hover { background:#e0c08a; transform:translateY(-4px); }
-
-    footer {
-      text-align:center; padding:2.5rem; background:#000; font-size:1rem; color:#aaa; border-top:1px solid #333;
-    }
-
-    @media (max-width:768px) {
-      header { padding:1rem 5%; flex-direction:column; gap:1rem; }
-      nav ul li { margin:0 1.2rem; }
-      .hero { min-height:60vh; padding:8rem 5% 4rem; }
-      h2 { font-size:2.4rem; }
-      .story-grid { grid-template-columns:1fr; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carpentry and joinery by joinery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-  <header>
-    <div class="logo">Carpentry and Joinery Guild</div>
-    <nav>
-      <ul>
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="course.html">Course</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <div class="hero-content">
-      <h1>About Patrick Chapalamira Jnr</h1>
-      <p>From admirer to qualified carpenter — now teaching the next generation in Malawi.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>My Story</h2>
-    <div class="content">
-      <p>My name is Patrick Chapalamira Jnr, and I'm the founder of the Chapalamira Jnr the Carpenters . My journey into woodworking started when I was just 18 years old. Back then, I had a friend my age who was already building beautiful sofa sets. I admired him so much — seeing someone young like me create something so solid and useful changed how I saw the trade. Before that, I used to think vocational or technical training was only for older people, not for youth like us.</p>
-
-      <p>In 2020, I decided to chase that dream properly. I enrolled in a technical college program for Carpentry and Joinery. I completed my first year at Salima Community Technical College (also known as Linthipe Technical College), then transferred to Salima Technical College to finish the full program. Today, I am a qualified carpenter, working with a construction company on real building projects across Malawi.</p>
-
-      <div class="story-grid">
-        <img src="https://thereishopemalawi.org/wp-content/uploads/2024/10/Picture2-1024x602.jpg" alt="Young Malawian carpenter measuring and working with timber in a training setting" class="story-img">
-        <div>
-          <h3>From Learning to Teaching</h3>
-          <p>Along the way, I've shared what I've learned by teaching some of my friends the basics of carpentry and joinery. Seeing them gain confidence and skills inspired me even more. Now, I'm ready to take it further — offering proper, structured training aligned with Malawi's TEVET (Technical, Entrepreneurial and Vocational Education and Training) standards through the guild.</p>
+    <div class="maintenance-wrapper">
+    <div class="circular-progress" style="--percent: 89;">
+        <div class="inner-circle">
+            <span class="percentage">89%</span>
         </div>
-      </div>
-
-      <p>This guild is about making carpentry and joinery accessible to young people in Malawi. No more thinking it's "only for elders" — if you're eager and willing to learn with passion, you can build a real career, create furniture, work on construction sites, or even start your own workshop.</p>
-
-      <h2>Our Mission & Values</h2>
-      <p><strong>Mission:</strong> To provide practical, hands-on training in carpentry and joinery that follows Malawi's technical and vocational standards, empowering youth and adults to become skilled, confident, and employable woodworkers.</p>
-
-      <p><strong>Core Values:</strong></p>
-      <ul style="list-style:none; padding-left:1.5rem; margin:1.5rem 0;">
-        <li>🔨 <strong>Passion First</strong> — We teach because we love the craft and want others to feel the same joy.</li>
-        <li>🛠️ <strong>Precision & Quality</strong> — Every measurement, cut, and joint must be done right.</li>
-        <li>🛡️ <strong>Safety & Respect</strong> — Tools and techniques taught safely from day one.</li>
-        <li>🌍 <strong>Youth Empowerment</strong> — Proving that technical skills are for young people too — building futures in Malawi.</li>
-        <li>📚 <strong>Practical Learning</strong> — More hammer in hand than theory on paper.</li>
-      </ul>
-
-      <h2>Ready to Start Your Journey?</h2>
-      <p style="text-align:center; margin:3rem 0;">
-        Whether you're just starting out or want to sharpen your skills the Malawi way, the guild is open to you.<br><br>
-        <a href="course.html" class="cta-btn">View Our Course</a>
-      </p>
     </div>
-  </section>
 
-  <footer>
-    Carpentry and Joinery Guild by Patrick Chapalamira Jnr | Learn Carpentry with Passion
-  </footer>
-
+    <div class="message-container">
+        <h1>Sorry for the inconvenience! </h1><p>Our <strong>WEBSITE</strong> is currently under maintenance. <strong>Please check back soon 🚧</strong>
+        </p>
+    </div>
+</div>
+    <script src="script.js"></script>
 </body>
 </html>
