@@ -1,0 +1,73 @@
+:root {
+    --bg-color: #3d4149;
+    --glow-blue: #3b82f6;
+    --text-main: #e2e8f0;
+    --text-dim: #a1a1aa;
+}
+
+body {
+    background-color: var(--bg-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+}
+
+.maintenance-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Space between loader and text */
+}
+
+/* Progress Bar Styles */
+.circular-progress {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(var(--glow-blue) calc(var(--percent) * 1%), #2c2f35 0);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+}
+
+.inner-circle {
+    width: 170px;
+    height: 170px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 8px 8px 15px rgba(0,0,0,0.5), inset -5px -5px 12px rgba(255,255,255,0.05);
+}
+
+.percentage {
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+/* Text Styles */
+.message-container h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.message-container p {
+    color: var(--text-dim);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.message-container strong {
+    color: var(--glow-blue);
+    font-weight: 600;
+}
