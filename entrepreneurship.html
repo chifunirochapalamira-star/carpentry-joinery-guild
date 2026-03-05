@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entrepreneurship Level 1 | Carpentry and Joinery Guild</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Segoe UI',sans-serif; background:#0f0f0f; color:#e0e0e0; line-height:1.7; }
+    header { position:fixed; top:0; width:100%; padding:1.2rem 6%; background:rgba(15,15,15,0.9); backdrop-filter:blur(10px); z-index:1000; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-size:1.7rem; font-weight:bold; color:#d4a373; }
+    nav ul { display:flex; list-style:none; }
+    nav ul li { margin-left:2.2rem; }
+    nav ul li a { color:#e0e0e0; text-decoration:none; font-weight:500; transition:color 0.3s; }
+    nav ul li a:hover { color:#d4a373; }
+    .hero { min-height:70vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 5%; background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center/cover; position:relative; }
+    .hero h1 { font-size:clamp(3rem,8vw,6rem); font-weight:900; margin-bottom:1rem; color:#fff; }
+    .hero p { font-size:1.4rem; max-width:700px; margin:0 auto 2rem; }
+    section { padding:6rem 6% 4rem; }
+    h2 { font-size:3rem; color:#d4a373; margin-bottom:2rem; text-align:center; }
+    .content { max-width:1100px; margin:0 auto; font-size:1.15rem; }
+    .component-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:2rem; margin:3rem 0; }
+    .component-card { background:#1a1a1a; padding:2rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.6); transition:transform 0.3s; }
+    .component-card:hover { transform:translateY(-8px); }
+    .component-card h3 { color:#d4a373; margin-bottom:1rem; }
+    .cycle { background:#1a1a1a; padding:3rem; border-radius:12px; text-align:center; font-size:1.3rem; margin:3rem 0; box-shadow:0 8px 20px rgba(0,0,0,0.6); }
+    .cycle-arrow { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; align-items:center; margin:2rem 0; }
+    .cycle-step { background:#222; padding:1rem 1.5rem; border-radius:50px; font-weight:bold; color:#d4a373; }
+    .cta-btn { display:inline-block; background:#d4a373; color:#000; padding:1rem 2.5rem; border-radius:50px; text-decoration:none; font-weight:bold; font-size:1.2rem; transition:all 0.3s; margin-top:1rem; }
+    .cta-btn:hover { background:#e0c08a; transform:translateY(-4px); }
+    footer { text-align:center; padding:2.5rem; background:#000; font-size:1rem; color:#aaa; border-top:1px solid #333; }
+    @media (max-width:768px) { header { flex-direction:column; gap:1rem; } .hero { min-height:60vh; padding:8rem 5% 4rem; } h2 { font-size:2.4rem; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Carpentry and Joinery Guild</div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../course.html">Course</a></li>
+        <li><a href="../contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Entrepreneurship Level 1</h1>
+      <p>TEVET-Aligned Module for Carpentry & Joinery<br>
+      <strong>Turn your skills into a profitable business in Malawi</strong></p>
+      <a href="#modules" class="cta-btn">Start Learning →</a>
+    </div>
+  </section>
+
+  <section id="modules">
+    <div class="content">
+      <h2>Entrepreneurship – Level 1</h2>
+      <p>Qualification Level One focuses on basic entrepreneurial understanding and the ability to start a small business.</p>
+      
+      <div class="modules-grid" style="margin-top:3rem;">
+
+        <!-- MODULE 1 -->
+        <div class="module-card">
+          <h3>1. Developing Entrepreneurial Motivation</h3>
+          <p>This module helps you develop the motivation and mindset required to start and run a profitable business.</p>
+          <ul style="margin:1rem 0; font-size:1rem; padding-left:1.2rem;">
+            <li>Conduct entrepreneurial self-assessment</li>
+            <li>Demonstrate personal entrepreneurial characteristics</li>
+            <li>Demonstrate achievement-oriented behaviour</li>
+            <li>Identify and solve entrepreneurial challenges</li>
+          </ul>
+          <a href="#" style="color:#d4a373; font-weight:bold;">Full Details Below ↓</a>
+        </div>
+
+        <!-- MODULE 2 -->
+        <div class="module-card">
+          <h3>2. Starting a Profitable Business</h3>
+          <p>This module teaches how to start and run a viable (successful) business — including identifying opportunities, planning, managing resources, and ensuring profit.</p>
+          <ul style="margin:1rem 0; font-size:1rem; padding-left:1.2rem;">
+            <li>Starting a viable business</li>
+            <li>Running a profitable business</li>
+          </ul>
+          <a href="#" style="color:#d4a373; font-weight:bold;">Full Details Below ↓</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#1a1a1a;">
+    <div class="content">
+      <h2>Module 1: Developing Entrepreneurial Motivation</h2>
+      
+      <h3 style="font-size:1.8rem; margin:2rem 0 1rem;">Purpose</h3>
+      <p>A trainee should be able to:<br>
+      • Develop entrepreneurial motivation<br>
+      • Build entrepreneurial characteristics<br>
+      • Show achievement-oriented behaviour</p>
+
+      <h3 style="font-size:1.8rem; margin:2.5rem 0 1rem;">Key Knowledge You Will Gain</h3>
+      <div class="component-grid">
+        <div class="component-card"><h3>Entrepreneur</h3><p>A person who starts and manages a business, identifies opportunities, is creative, organises resources for profit, takes calculated risks, and markets products/services.</p></div>
+        <div class="component-card"><h3>Characteristics of Successful Entrepreneurs</h3><p>Clear purpose • Passion • Customer focus • Persistence • Creativity • Coordination ability • Agent of change</p></div>
+        <div class="component-card"><h3>Entrepreneurial Values</h3><p>Self-confidence • Persistence • Hard work • Independence • Time consciousness • Persuasiveness • Commitment</p></div>
+        <div class="component-card"><h3>Entrepreneurship vs Business Management</h3><p>Entrepreneurship = Innovation + Risk + New ventures<br>Business Management = Planning + Organising + Existing systems</p></div>
+        <div class="component-card"><h3>Benefits to the Economy</h3><p>Creates employment • Improves living standards • Contributes to GDP • Promotes exports • Supports infrastructure</p></div>
+        <div class="component-card"><h3>Self-Assessment Methods</h3><p>Questionnaires • Interviews • Personality tests • Self-appraisal</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+
+  <div style="text-align:center; padding:4rem 6% 6rem; background:#1a1a1a;">
+    <p style="font-size:1.3rem; max-width:800px; margin:0 auto 2rem;">Level 1 entrepreneurship mainly teaches the entrepreneurial mindset, characteristics of successful entrepreneurs, self-assessment, and the basics of starting a business — perfect for turning your carpentry skills into a sustainable workshop or site business in Malawi.</p>
+    <a href="enter.html" class="cta-btn">Module 2</a>
+</section>
+  <footer>
+    Carpentry and Joinery Guild by Patrick Chapalamira Jnr | Learn Carpentry with Passion
+  </footer>
+
+</body>
+</html>
