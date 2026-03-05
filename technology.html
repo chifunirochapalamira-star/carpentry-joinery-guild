@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Technology Module | Carpentry and Joinery Guild</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    /* Copy the full CSS from your previous pages here (hero, header, footer, etc.) */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Segoe UI',sans-serif; background:#0f0f0f; color:#e0e0e0; line-height:1.7; }
+    header { position:fixed; top:0; width:100%; padding:1.2rem 6%; background:rgba(15,15,15,0.9); backdrop-filter:blur(10px); z-index:1000; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-size:1.7rem; font-weight:bold; color:#d4a373; }
+    nav ul { display:flex; list-style:none; }
+    nav ul li { margin-left:2.2rem; }
+    nav ul li a { color:#e0e0e0; text-decoration:none; font-weight:500; transition:color 0.3s; }
+    nav ul li a:hover { color:#d4a373; }
+    .hero { min-height:70vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 5%; background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center/cover; position:relative; }
+    .hero h1 { font-size:clamp(3rem,8vw,6rem); font-weight:900; margin-bottom:1rem; color:#fff; }
+    section { padding:6rem 6% 4rem; }
+    h2 { font-size:3rem; color:#d4a373; margin-bottom:2rem; text-align:center; }
+    .content { max-width:1100px; margin:0 auto; font-size:1.15rem; }
+    .modules-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:2rem; margin:3rem 0; }
+    .module-card { background:#1a1a1a; padding:2rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.6); transition:transform 0.3s; }
+    .module-card:hover { transform:translateY(-8px); }
+    .module-card h3 { color:#d4a373; margin-bottom:1rem; }
+    .module-card a { color:#d4a373; font-weight:bold; text-decoration:none; }
+    .module-card a:hover { text-decoration:underline; }
+    .cta-btn { display:inline-block; background:#d4a373; color:#000; padding:1rem 2.5rem; border-radius:50px; text-decoration:none; font-weight:bold; font-size:1.2rem; transition:all 0.3s; }
+    .cta-btn:hover { background:#e0c08a; transform:translateY(-4px); }
+    footer { text-align:center; padding:2.5rem; background:#000; font-size:1rem; color:#aaa; border-top:1px solid #333; }
+    @media (max-width:768px) { header { flex-direction:column; gap:1rem; } .hero { min-height:60vh; padding:8rem 5% 4rem; } h2 { font-size:2.4rem; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Carpentry and Joinery Guild</div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../courses.html">Course</a></li>
+        <li><a href="../contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Technology Module</h1>
+      <p>Practical, hands-on woodworking skills — from basic hand tools to advanced structural constructions, taught the real Malawi way.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Introduction to the Technology Module</h2>
+    <div class="content">
+      <p>The Technology module is the heart of our carpentry and joinery training. Here you will learn real workshop and site skills through step-by-step projects — everything a qualified carpenter and joiner in Malawi needs to know.</p>
+      
+      <p>We follow a practical, project-based approach aligned with TEVET competencies. You will use tools, work with timber, build components, and construct full structures. Each topic includes safety, measurements, quality checks, and finishing.</p>
+      
+      <p><strong>This module covers 9 main practical areas:</strong></p>
+
+      <div class="modules-grid">
+        <div class="module-card">
+          <h3>1. Using Hand Tools</h3>
+          <p>Master all essential hand tools safely and accurately.</p>
+          <a href="hand-tools.html">Start Learning →</a>
+        </div>
+
+        <div class="module-card">
+          <h3>2. Seasoning of Timber</h3>
+          <p>Learn how to properly dry and prepare timber to prevent warping and cracking.</p>
+          <a href="seasoning-timber.html">Start Learning →</a>
+        </div>
+
+        <div class="module-card">
+          <h3>3. Making Doors and Window Frames</h3>
+          <p>Build strong, well-fitted doors and frames from scratch.</p>
+          <a href="doors-frames.html">Start Learning →</a>
+        </div>
+
+        <div class="module-card">
+          <h3>4. Installing Doors and Window Sashes</h3>
+          <p>Fit and hang doors/sashes perfectly — including hardware and adjustments.</p>
+          <a href="installing-sash.html">Start Learning →</a>
+        </div>
+
+        <div class="module-card">
+          <h3>5. Making House Furniture</h3>
+          <p>Create functional and beautiful pieces: picture frames, beds, tables, chairs.</p>
+          <a href="house-furniture.html">Start Learning →</a>
+        </div>
+
+        <div class="module-card">
+          <h3>6. Making a Coffin</h3>
+          <p>Learn respectful construction techniques for coffins — including measurements and finishing.</p>
+          <a href="making-coffin.html">Start Learning →</a>
+        </div>
+
+        <div class="module-card">
+          <h3>7. Making Mouldings</h3>
+          <p>Produce decorative mouldings for finishing interiors and furniture.</p>
+          <a href="making-mouldings.html">Start Learning →</a>
+        </div>
+
+        <div class="module-card">
+          <h3>8. Constructing Ring Shutters</h3>
+          <p>Build strong ring shutters (security/ventilation shutters) commonly used in Malawi homes.</p>
+          <a href="ring-shutter.html">Start Learning →</a>
+        </div>
+
+        <div class="module-card">
+          <h3>9. Constructing Roof Trusses</h3>
+          <p>Design and build timber roof trusses for strong, safe roofing structures.</p>
+          <a href="roof-trusses.html">Start Learning →</a>
+        </div>
+      </div>
+
+      <p style="text-align:center; margin:4rem 0;">
+        Ready to start building real skills?<br><br>
+        <a href="../contact.html" class="cta-btn">Enroll or Ask Questions</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    Carpentry and Joinery Guild by Patrick Chapalamira Jnr | Learn Carpentry with Passion
+  </footer>
+
+</body>
+</html>

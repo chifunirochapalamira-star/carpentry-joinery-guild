@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Course | Carpentry and Joinery Guild</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Segoe UI',sans-serif; background:#0f0f0f; color:#e0e0e0; line-height:1.7; }
+    header { position:fixed; top:0; width:100%; padding:1.2rem 6%; background:rgba(15,15,15,0.9); backdrop-filter:blur(10px); z-index:1000; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-size:1.7rem; font-weight:bold; color:#d4a373; }
+    nav ul { display:flex; list-style:none; }
+    nav ul li { margin-left:2.2rem; }
+    nav ul li a { color:#e0e0e0; text-decoration:none; font-weight:500; transition:color 0.3s; }
+    nav ul li a:hover { color:#d4a373; }
+    .hero { min-height:70vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 5%; background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/3803510/pexels-photo-3803510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center/cover; position:relative; }
+    .hero h1 { font-size:clamp(3rem,8vw,6rem); font-weight:900; margin-bottom:1rem; color:#fff; }
+    .hero p { font-size:1.4rem; max-width:700px; margin:0 auto 2rem; }
+    section { padding:6rem 6% 4rem; }
+    h2 { font-size:3rem; color:#d4a373; margin-bottom:2rem; text-align:center; }
+    .content { max-width:1100px; margin:0 auto; font-size:1.15rem; }
+    .modules-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:2rem; margin:3rem 0; }
+    .module-card { background:#1a1a1a; padding:2rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.6); transition:transform 0.3s; }
+    .module-card:hover { transform:translateY(-8px); }
+    .module-card h3 { color:#d4a373; margin-bottom:1rem; }
+    .module-card a { color:#d4a373; font-weight:bold; text-decoration:none; }
+    .module-card a:hover { text-decoration:underline; }
+    .cta-btn { display:inline-block; background:#d4a373; color:#000; padding:1rem 2.5rem; border-radius:50px; text-decoration:none; font-weight:bold; font-size:1.2rem; transition:all 0.3s; margin-top:1rem; }
+    .cta-btn:hover { background:#e0c08a; transform:translateY(-4px); }
+    footer { text-align:center; padding:2.5rem; background:#000; font-size:1rem; color:#aaa; border-top:1px solid #333; }
+    @media (max-width:768px) { header { flex-direction:column; gap:1rem; } .hero { min-height:60vh; padding:8rem 5% 4rem; } h2 { font-size:2.4rem; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Carpentry and Joinery Guild</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Course</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Explore Our TEVET-Aligned Course</h1>
+      <p>Practical carpentry & joinery training with essential fundamental subjects — building skilled, employable professionals in Malawi.</p>
+      <a href="#modules" class="cta-btn">See All Course</a>
+    </div>
+  </section>
+
+  <section id="modules">
+    <h2>Core Fundamental Subjects</h2>
+    <div class="content">
+      <p>Our course follows Malawi TEVET standards, combining hands-on carpentry/joinery with these mandatory fundamental subjects. Each module builds essential knowledge for success in the trade — from safety to business skills. Click each for more details (separate pages coming soon).</p>
+      
+      <div class="modules-grid">
+        <div class="module-card">
+          <h3>1. Technology</h3>
+          <p>Introduction to modern tools, machinery, and basic technology used in woodworking — including power tools, measuring devices, and emerging tech in construction.</p>
+          <a href="technology.html">Learn More →</a>
+        </div>
+
+        <div class="module-card">
+          <h3>2. Science</h3>
+          <p>Basic principles of materials science, wood properties (strength, moisture, durability), adhesives, and how science applies to timber behavior and construction stability.</p>
+          <a href="science.html">Learn More →</a>
+        </div>
+
+        <div class="module-card">
+          <h3>3. Numeracy / Mathematics</h3>
+          <p>Practical calculations for measurements, angles, quantities, costing materials, scaling drawings, and estimating project needs — essential for accurate carpentry work.</p>
+          <a href="numeracy.html">Learn More →</a>
+        </div>
+
+        <div class="module-card">
+          <h3>4. Communication Graphics / Technical Drawing</h3>
+          <p>Reading and creating blueprints, plans, elevations, sections, isometric views, and sketches — key for understanding designs and communicating on site or in the workshop.</p>
+          <a href="technical-drawing.html">Learn More →</a>
+        </div>
+
+        <div class="module-card">
+          <h3>5. Communication</h3>
+          <p>Effective verbal/written communication, report writing, client interaction, teamwork on sites, and presenting your work — vital for jobs and running your own business.</p>
+          <a href="communication.html">Learn More →</a>
+        </div>
+
+        <div class="module-card">
+          <h3>6. Entrepreneurship</h3>
+          <p>Starting and managing a small carpentry workshop, costing jobs, finding clients, basic business planning, marketing your services, and turning skills into income in Malawi.</p>
+          <a href="entrepreneurship.html">Learn More →</a>
+        </div>
+
+        <div class="module-card">
+          <h3>7. Occupational Safety and Health (OSH)</h3>
+          <p>Workshop/site safety rules, PPE use, hazard identification, first aid, safe tool handling, and preventing accidents — mandatory for all TEVET trades and real-world work.</p>
+          <a href="osh.html">Learn More →</a>
+        </div>
+      </div>
+
+      <p style="text-align:center; margin:4rem 0;">
+        These fundamentals complement our main carpentry & joinery practical training (workshop operations, site work, joints, furniture, roofing, etc.).<br><br>
+        <a href="index.html#contact" class="cta-btn">Enroll or Inquire About Batches</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    Carpentry and Joinery Guild by Patrick Chapalamira Jnr | Learn Carpentry with Passion
+  </footer>
+
+</body>
+</html>

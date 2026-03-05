@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carpentry and Joinery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: #e0e0e0;
+      line-height: 1.7;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1.2rem 6%;
+      background: rgba(15, 15, 15, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.7rem;
+      font-weight: bold;
+      color: #d4a373;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 2.2rem;
+    }
+
+    nav ul li a {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #d4a373;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 5%;
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.pexels.com/photos/17410693/pexels-photo-17410693/free-photo-of-man-standing-with-drill-on-house-construction.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center/cover;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      color: #fff;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: #d4a373;
+      color: #000;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: all 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: #e0c08a;
+      transform: translateY(-4px);
+    }
+
+    section {
+      padding: 6rem 6% 4rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+      color: #d4a373;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+    }
+
+    .content p {
+      margin-bottom: 1.5rem;
+    }
+
+    .images-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+
+    .images-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      transition: transform 0.3s;
+    }
+
+    .images-grid img:hover {
+      transform: scale(1.04);
+    }
+
+    .joinery-section {
+      background: #111;
+    }
+
+    /* Contact Form Styles */
+    #contact form {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #1a1a1a;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    }
+
+    #contact label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #d4a373;
+    }
+
+    #contact input,
+    #contact textarea {
+      width: 100%;
+      padding: 0.9rem;
+      margin-bottom: 1.5rem;
+      background: #222;
+      border: 1px solid #444;
+      border-radius: 6px;
+      color: #e0e0e0;
+      font-size: 1rem;
+    }
+
+    #contact input:focus,
+    #contact textarea:focus {
+      outline: none;
+      border-color: #d4a373;
+      box-shadow: 0 0 8px rgba(212, 163, 115, 0.3);
+    }
+
+    #contact button {
+      background: #d4a373;
+      color: #000;
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    #contact button:hover:not(:disabled) {
+      background: #e0c08a;
+      transform: translateY(-3px);
+    }
+
+    #contact button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    #contact .honeypot {
+      display: none;
+    }
+
+    #form-status {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    #form-status.success {
+      background: #2e7d32;
+      color: white;
+    }
+
+    #form-status.error {
+      background: #c62828;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem;
+      background: #000;
+      font-size: 1rem;
+      color: #aaa;
+      border-top: 1px solid #333;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 1rem 5%;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav ul li {
+        margin: 0 1.2rem;
+      }
+
+      .hero {
+        min-height: 70vh;
+        padding: 8rem 5% 4rem;
+      }
+
+      h2 {
+        font-size: 2.4rem;
+      }
+
+      #contact form {
+        padding: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Carpentry and Joinery</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li> <a href="about.html">About</a>
+        <li><a href="courses.html">Course</a></li>
+        <li><a href="contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Carpentry and Joinery</h1>
+      <p>Master the art of transforming timber into strong structures and fine furniture. Learn with passion.</p>
+      <a href="#about" class="cta-btn">Explore Now</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>What is Carpentry and Joinery?</h2>
+    <div class="content">
+      <p>Carpentry and joinery are skilled trades within the woodworking industry that focus on the design, construction, and installation of wooden structures and products. These crafts combine technical knowledge, precision, and creativity to transform raw timber into functional and durable components used in buildings, furniture, and interior fittings.</p>
+      
+      <p>Carpentry mainly involves structural work carried out on construction sites. Carpenters are responsible for building and installing frameworks, roofing structures, flooring systems, staircases, and other wooden parts of buildings. Their work ensures that structures are strong, safe, and properly aligned.</p>
+    </div>
+    <div class="images-grid">
+      <img src="https://thumbs.dreamstime.com/b/skilled-carpenter-focuses-assembling-wooden-beams-standing-inside-house-structure-sunny-day-works-framework-under-334427696.jpg" alt="Carpenter assembling wooden framework on construction site">
+      <img src="https://airtasker-seo-assets-prod.s3.amazonaws.com/en_US/1696204391639-carpenter-cutting-wood.jpg" alt="Carpenter sawing wood with hand tools">
+      <img src="https://images.squarespace-cdn.com/content/v1/594ac91fd1758e19a10c0d10/512896d6-ef97-4a69-a49c-15c70b4e2941/_DSC0748.jpg" alt="Instructor teaching carpentry tools to students">
+    </div>
+  </section>
+
+  <section id="joinery" class="joinery-section">
+    <h2>Joinery: Precision & Fine Craftsmanship</h2>
+    <div class="content">
+      <p>Joinery focuses on the detailed crafting of wooden components, typically in a controlled workshop environment. Joiners create high-quality, precise items such as doors, window frames, cabinets, tables, chairs, staircases, and custom furniture. This trade demands exceptional accuracy, fine measurements, and deep knowledge of wood behavior (grain, moisture, expansion).</p>
+      
+      <p>Unlike carpentry's larger structural focus, joinery emphasizes beautiful, tight joints (mortise & tenon, dovetails, dowels, biscuits) and smooth finishes. Joiners often work with hardwoods and apply techniques like hand-planing, chiseling, and sanding to achieve professional results. Many joiners also handle decorative elements, moldings, and built-in fittings for homes and offices.</p>
+      
+      <p>Both trades complement each other — carpentry builds the skeleton of a building, while joinery adds the refined, visible details that make spaces functional and elegant.</p>
+    </div>
+    <div class="images-grid">
+      <img src="https://cdn.fastpixel.io/fp/ret_img+v_bcdc+w_1182+h_788+q_lossy+to_webp/mgbjoinery.com.au%2Fwp-content%2Fuploads%2F2024%2F11%2FUnderstanding-the-Basics-of-Joinery-1-2048x1365.webp" alt="Joiner precision cutting wood in workshop">
+      <img src="https://blog.axminstertools.com/wp-content/uploads/2017/11/cabinetmaking_tools_cabinetmaker.jpg" alt="Joiner assembling wooden cabinet">
+      <img src="https://www.finewoodworking.com/app/uploads/2024/10/011313022-martin-59-700x526.jpg" alt="Handcrafted wooden furniture piece in workshop">
+      <img src="https://images.squarespace-cdn.com/content/v1/538ec64ee4b0a08b2055b97c/940ca278-2489-4c7a-890c-0f36af5193fc/_DSC3778.jpg" alt="Woodworker sanding large custom wooden table">
+    </div>
+  </section>
+
+  <section id="course">
+    <h2>Our Course</h2>
+    <div class="content">
+      <p>Through proper training and hands-on practice, learners develop the expertise needed to produce quality woodwork, contribute to real construction projects, and build a successful career in the carpentry and joinery industry.</p>
+      <p>Coming soon: Practical modules on tools, joints, safety, reading drawings, site work, workshop techniques, and project building. Learn carpentry with passion!</p>
+    </div>
+    <div class="images-grid">
+      <img src="https://jcblhandtools.com/wp-content/uploads/2023/12/Woodworking-Hand-Tools-For-Carpentry-JCBL-Hand-Tools.webp" alt="Wall-mounted collection of woodworking hand tools">
+      <img src="https://www.theenglishwoodworker.com/wp-content/uploads/2019/01/workshop-for-hand-tool-woodworking.jpg" alt="Organized hand-tool woodworking workshop">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="content" style="text-align:center; margin-bottom: 2rem;">
+      <p>Ready to start your woodworking journey? Drop us a message — we'd love to hear from you!</p>
+    </div>
+
+    <form id="contact-form" action="https://formspree.io/f/mqeyzelj" method="POST">
+      <input type="text" name="_gotcha" class="honeypot" style="display:none;" /> <!-- Anti-spam honeypot -->
+
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" required placeholder="Your name">
+
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="e.g., Course Inquiry, Custom Project">
+
+      <label for="message">Your Message *</label>
+      <textarea id="message" name="message" rows="6" required placeholder="Tell us about your interest in carpentry/joinery..."></textarea>
+
+      <button type="submit" id="submit-btn">Send Message</button>
+
+      <p id="form-status"></p>
+    </form>
+  </section>
+
+  <footer>
+    Carpentry and Joinery Guild by Patrick Chapalamira Jnr | Learn Carpentry with Passion
+  </footer>
+
+  <script>
+    // Smooth scrolling for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // AJAX Form Submission
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+    const submitBtn = document.getElementById("submit-btn");
+
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      status.textContent = "";
+      status.className = "";
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+
+      try {
+        const data = new FormData(form);
+        
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          status.textContent = "Thanks! Your message has been sent successfully. We'll get back to you soon.";
+          status.className = "success";
+          form.reset();
+        } else {
+          const errorData = await response.json();
+          status.textContent = errorData.error || "Oops! There was a problem sending your message. Please try again.";
+          status.className = "error";
+        }
+      } catch (error) {
+        status.textContent = "Network error. Please check your connection and try again.";
+        status.className = "error";
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send Message";
+      }
+    });
+  </script>
+
+</body>
+</html>
